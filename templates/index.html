@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>UEB Invoice</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="header">
+    <!-- <img src="/static/img/logo.webp" alt="Logo" class="logo"> -->
+    <span class="header-title">Hệ thống trích xuất thông tin hóa đơn UEB</span>
+</div>
+<div class="container">
+    <div class="left-panel">
+        <h2>Nhập hóa đơn PDF</h2>
+        <form id="upload-form" enctype="multipart/form-data">
+            <input type="file" id="pdf_file" name="pdf_file" accept="application/pdf" required>
+            <button type="submit">Phân tích</button>
+            <span id="loading" style="display:none;margin-left:12px;color:#9c27b0;font-weight:bold;">
+                <img src="/static/img/loading.svg" style="height:22px;vertical-align:middle;margin-right:6px;"> Đang phân tích...
+            </span>
+        </form>
+        <div id="pdf-preview"></div>
+        <div id="ocr-text" style="display:none">
+            <h3>Văn bản OCR:</h3>
+            <pre id="ocr-content"></pre>
+        </div>
+    </div>
+    <div class="right-panel">
+        <h2>Kết quả trích xuất</h2>
+        <div id="result-fields">
+            <!-- Các nhãn sẽ được render ở đây bằng JS -->
+        </div>
+    </div>
+</div>
+<script src="/static/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.2.67/pdf.min.js"></script>
+</body>
+</html>

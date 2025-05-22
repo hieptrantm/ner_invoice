@@ -1,0 +1,192 @@
+/* filepath: InvoiceNER/static/style.css */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e3f0ff 0%, #f9e7ff 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.left-panel, .right-panel {
+    flex: 1;
+    padding: 32px 24px;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10), 0 1.5px 6px 0 rgba(80,80,80,0.07);
+    border-radius: 18px;
+    margin: 24px 18px;
+    overflow-y: auto;
+    transition: box-shadow 0.2s;
+}
+
+.left-panel {
+    border-right: none;
+}
+
+.right-panel {
+    background: rgba(250,251,252,0.97);
+}
+
+.left-panel:hover, .right-panel:hover {
+    box-shadow: 0 12px 36px 0 rgba(31, 38, 135, 0.18), 0 2px 8px 0 rgba(80,80,80,0.10);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, #1976d2 60%, #9c27b0 100%);
+    color: #fff;
+    padding: 18px 36px;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 12px #bdbdbd;
+    border-radius: 0 0 18px 18px;
+    margin-bottom: 12px;
+}
+
+.logo {
+    height: 52px;
+    margin-right: 22px;
+    filter: drop-shadow(0 2px 6px #fff8);
+}
+
+.header-title {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px #0002;
+}
+
+h2, h3 {
+    color: #2d3a4a;
+    margin-top: 0;
+    text-shadow: 0 1px 4px #fff8;
+}
+
+form {
+    margin-bottom: 16px;
+}
+
+input[type="file"] {
+    margin-bottom: 12px;
+}
+
+button {
+    background: linear-gradient(90deg, #1976d2 60%, #9c27b0 100%);
+    color: #fff;
+    border: none;
+    padding: 10px 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px #bdbdbd;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #125ea2 60%, #7c1fa0 100%);
+    box-shadow: 0 4px 16px #bdbdbd;
+}
+
+#pdf-preview {
+    margin-top: 16px;
+    min-height: 120px;
+    border: 1.5px dashed #b0b0b0;
+    background: #f8f8f8cc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px #e0e0e0;
+}
+
+#ocr-text {
+    margin-top: 18px;
+    background: #f0f4f8cc;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #333;
+    box-shadow: 0 1px 4px #e0e0e0;
+}
+
+#result-fields {
+    margin-top: 10px;
+}
+
+.result-label {
+    font-weight: bold;
+    color: #1976d2;
+    text-shadow: 0 1px 4px #fff8;
+}
+
+.result-value {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    background: #f4f8fbcc;
+    border-radius: 6px;
+    min-height: 18px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 1px 4px #e0e0e0;
+    font-size: 16px;
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 18px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px #bdbdbd;
+}
+
+.order-table caption {
+    caption-side: top;
+    font-weight: bold;
+    color: #1976d2;
+    background: #eaf6ff;
+    padding: 8px 0;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+.order-table td {
+    border: 1px solid #e0e0e0;
+    padding: 9px 14px;
+    font-size: 15px;
+    background: #f9fafd;
+}
+
+.order-label {
+    font-weight: bold;
+    color: #1976d2;
+    background: #f4f8fb;
+    width: 220px;
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+    .left-panel, .right-panel {
+        border-right: none;
+        border-bottom: 1px solid #e1e1e1;
+        min-height: 300px;
+        margin: 12px 6px;
+    }
+    .header {
+        border-radius: 0 0 12px 12px;
+        padding: 12px 10px;
+        font-size: 18px;
+    }
+}
